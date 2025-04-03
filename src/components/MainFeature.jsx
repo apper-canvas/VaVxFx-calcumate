@@ -137,28 +137,28 @@ const MainFeature = ({ onCalculation }) => {
     }
   }
 
-  // Button configuration with enhanced styling
+  // Button configuration with enhanced styling and centered icons
   const buttons = [
     { label: 'C', onClick: handleClear, className: 'bg-gradient-accent text-white font-bold rounded-xl shadow-md' },
-    { label: <RotateCcw size={18} />, onClick: handleBackspace, className: 'bg-gradient-warning text-white font-medium rounded-xl shadow-md' },
+    { label: <div className="flex justify-center items-center"><RotateCcw size={18} /></div>, onClick: handleBackspace, className: 'bg-gradient-warning text-white font-medium rounded-xl shadow-md' },
     { label: '%', onClick: () => handleOperator('%'), className: 'bg-gradient-secondary text-white font-medium rounded-xl shadow-md' },
-    { label: <Divide size={18} />, onClick: () => handleOperator('÷'), className: 'bg-gradient-secondary text-white font-medium rounded-xl shadow-md' },
+    { label: <div className="flex justify-center items-center"><Divide size={18} /></div>, onClick: () => handleOperator('÷'), className: 'bg-gradient-secondary text-white font-medium rounded-xl shadow-md' },
     { label: '7', onClick: () => handleNumberInput('7'), className: 'bg-white dark:bg-surface-800 text-surface-800 dark:text-white font-medium rounded-xl shadow-md' },
     { label: '8', onClick: () => handleNumberInput('8'), className: 'bg-white dark:bg-surface-800 text-surface-800 dark:text-white font-medium rounded-xl shadow-md' },
     { label: '9', onClick: () => handleNumberInput('9'), className: 'bg-white dark:bg-surface-800 text-surface-800 dark:text-white font-medium rounded-xl shadow-md' },
-    { label: <X size={18} />, onClick: () => handleOperator('×'), className: 'bg-gradient-secondary text-white font-medium rounded-xl shadow-md' },
+    { label: <div className="flex justify-center items-center"><X size={18} /></div>, onClick: () => handleOperator('×'), className: 'bg-gradient-secondary text-white font-medium rounded-xl shadow-md' },
     { label: '4', onClick: () => handleNumberInput('4'), className: 'bg-white dark:bg-surface-800 text-surface-800 dark:text-white font-medium rounded-xl shadow-md' },
     { label: '5', onClick: () => handleNumberInput('5'), className: 'bg-white dark:bg-surface-800 text-surface-800 dark:text-white font-medium rounded-xl shadow-md' },
     { label: '6', onClick: () => handleNumberInput('6'), className: 'bg-white dark:bg-surface-800 text-surface-800 dark:text-white font-medium rounded-xl shadow-md' },
-    { label: <Minus size={18} />, onClick: () => handleOperator('-'), className: 'bg-gradient-secondary text-white font-medium rounded-xl shadow-md' },
+    { label: <div className="flex justify-center items-center"><Minus size={18} /></div>, onClick: () => handleOperator('-'), className: 'bg-gradient-secondary text-white font-medium rounded-xl shadow-md' },
     { label: '1', onClick: () => handleNumberInput('1'), className: 'bg-white dark:bg-surface-800 text-surface-800 dark:text-white font-medium rounded-xl shadow-md' },
     { label: '2', onClick: () => handleNumberInput('2'), className: 'bg-white dark:bg-surface-800 text-surface-800 dark:text-white font-medium rounded-xl shadow-md' },
     { label: '3', onClick: () => handleNumberInput('3'), className: 'bg-white dark:bg-surface-800 text-surface-800 dark:text-white font-medium rounded-xl shadow-md' },
-    { label: <Plus size={18} />, onClick: () => handleOperator('+'), className: 'bg-gradient-secondary text-white font-medium rounded-xl shadow-md' },
+    { label: <div className="flex justify-center items-center"><Plus size={18} /></div>, onClick: () => handleOperator('+'), className: 'bg-gradient-secondary text-white font-medium rounded-xl shadow-md' },
     { label: 'MS', onClick: handleMemoryStore, className: 'bg-gradient-info text-white text-sm font-medium rounded-xl shadow-md' },
     { label: '0', onClick: () => handleNumberInput('0'), className: 'bg-white dark:bg-surface-800 text-surface-800 dark:text-white font-medium rounded-xl shadow-md' },
     { label: '.', onClick: handleDecimalPoint, className: 'bg-white dark:bg-surface-800 text-surface-800 dark:text-white font-medium rounded-xl shadow-md' },
-    { label: <Equal size={18} />, onClick: calculateResult, className: 'bg-gradient-primary hover:bg-gradient-purple-blue text-white font-bold rounded-xl shadow-md' },
+    { label: <div className="flex justify-center items-center"><Equal size={18} /></div>, onClick: calculateResult, className: 'bg-gradient-primary hover:bg-gradient-purple-blue text-white font-bold rounded-xl shadow-md' },
   ]
 
   return (
@@ -233,7 +233,7 @@ const MainFeature = ({ onCalculation }) => {
               key={index}
               whileTap={{ scale: 0.95 }}
               whileHover={{ boxShadow: "0 0 8px rgba(139, 92, 246, 0.3)" }}
-              className={`${button.className} h-14 md:h-16`}
+              className={`${button.className} h-14 md:h-16 flex justify-center items-center`}
               onClick={button.onClick}
             >
               {button.label}
