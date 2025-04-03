@@ -22,7 +22,7 @@ const Home = () => {
         transition={{ duration: 0.5 }}
       >
         <h1 className="text-3xl md:text-4xl font-bold text-center mb-6 text-surface-800 dark:text-surface-100">
-          Welcome to <span className="text-primary">Calcu</span><span className="text-accent">Mate</span>
+          Welcome to <span className="text-primary">I</span><span className="text-accent">Cal</span>
         </h1>
         
         <p className="text-center text-surface-600 dark:text-surface-300 mb-8 max-w-2xl mx-auto">

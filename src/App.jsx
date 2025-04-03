@@ -31,7 +31,7 @@ function App() {
             transition={{ duration: 1, ease: "easeInOut" }}
             className="text-primary font-bold text-2xl"
           >
-            Calcu<span className="text-accent">Mate</span>
+            I<span className="text-accent">Cal</span>
           </motion.div>
         </div>
         
@@ -57,7 +57,7 @@ function App() {
       </main>
 
       <footer className="py-6 text-center text-surface-500 dark:text-surface-400 text-sm">
-        <p>© {new Date().getFullYear()} CalcuMate. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} ICal. All rights reserved.</p>
       </footer>
     </div>
   )
