@@ -137,28 +137,28 @@ const MainFeature = ({ onCalculation }) => {
     }
   }
 
-  // Button configuration
+  // Button configuration with enhanced styling
   const buttons = [
-    { label: 'C', onClick: handleClear, className: 'calc-button-clear' },
-    { label: <RotateCcw size={18} />, onClick: handleBackspace, className: 'calc-button-function' },
-    { label: '%', onClick: () => handleOperator('%'), className: 'calc-button-operation' },
-    { label: <Divide size={18} />, onClick: () => handleOperator('÷'), className: 'calc-button-operation' },
-    { label: '7', onClick: () => handleNumberInput('7'), className: 'calc-button-number' },
-    { label: '8', onClick: () => handleNumberInput('8'), className: 'calc-button-number' },
-    { label: '9', onClick: () => handleNumberInput('9'), className: 'calc-button-number' },
-    { label: <X size={18} />, onClick: () => handleOperator('×'), className: 'calc-button-operation' },
-    { label: '4', onClick: () => handleNumberInput('4'), className: 'calc-button-number' },
-    { label: '5', onClick: () => handleNumberInput('5'), className: 'calc-button-number' },
-    { label: '6', onClick: () => handleNumberInput('6'), className: 'calc-button-number' },
-    { label: <Minus size={18} />, onClick: () => handleOperator('-'), className: 'calc-button-operation' },
-    { label: '1', onClick: () => handleNumberInput('1'), className: 'calc-button-number' },
-    { label: '2', onClick: () => handleNumberInput('2'), className: 'calc-button-number' },
-    { label: '3', onClick: () => handleNumberInput('3'), className: 'calc-button-number' },
-    { label: <Plus size={18} />, onClick: () => handleOperator('+'), className: 'calc-button-operation' },
-    { label: 'MS', onClick: handleMemoryStore, className: 'calc-button-function text-sm' },
-    { label: '0', onClick: () => handleNumberInput('0'), className: 'calc-button-number' },
-    { label: '.', onClick: handleDecimalPoint, className: 'calc-button-number' },
-    { label: <Equal size={18} />, onClick: calculateResult, className: 'calc-button-operation bg-primary dark:bg-primary' },
+    { label: 'C', onClick: handleClear, className: 'bg-gradient-accent text-white font-bold rounded-xl shadow-md' },
+    { label: <RotateCcw size={18} />, onClick: handleBackspace, className: 'bg-gradient-warning text-white font-medium rounded-xl shadow-md' },
+    { label: '%', onClick: () => handleOperator('%'), className: 'bg-gradient-secondary text-white font-medium rounded-xl shadow-md' },
+    { label: <Divide size={18} />, onClick: () => handleOperator('÷'), className: 'bg-gradient-secondary text-white font-medium rounded-xl shadow-md' },
+    { label: '7', onClick: () => handleNumberInput('7'), className: 'bg-white dark:bg-surface-800 text-surface-800 dark:text-white font-medium rounded-xl shadow-md' },
+    { label: '8', onClick: () => handleNumberInput('8'), className: 'bg-white dark:bg-surface-800 text-surface-800 dark:text-white font-medium rounded-xl shadow-md' },
+    { label: '9', onClick: () => handleNumberInput('9'), className: 'bg-white dark:bg-surface-800 text-surface-800 dark:text-white font-medium rounded-xl shadow-md' },
+    { label: <X size={18} />, onClick: () => handleOperator('×'), className: 'bg-gradient-secondary text-white font-medium rounded-xl shadow-md' },
+    { label: '4', onClick: () => handleNumberInput('4'), className: 'bg-white dark:bg-surface-800 text-surface-800 dark:text-white font-medium rounded-xl shadow-md' },
+    { label: '5', onClick: () => handleNumberInput('5'), className: 'bg-white dark:bg-surface-800 text-surface-800 dark:text-white font-medium rounded-xl shadow-md' },
+    { label: '6', onClick: () => handleNumberInput('6'), className: 'bg-white dark:bg-surface-800 text-surface-800 dark:text-white font-medium rounded-xl shadow-md' },
+    { label: <Minus size={18} />, onClick: () => handleOperator('-'), className: 'bg-gradient-secondary text-white font-medium rounded-xl shadow-md' },
+    { label: '1', onClick: () => handleNumberInput('1'), className: 'bg-white dark:bg-surface-800 text-surface-800 dark:text-white font-medium rounded-xl shadow-md' },
+    { label: '2', onClick: () => handleNumberInput('2'), className: 'bg-white dark:bg-surface-800 text-surface-800 dark:text-white font-medium rounded-xl shadow-md' },
+    { label: '3', onClick: () => handleNumberInput('3'), className: 'bg-white dark:bg-surface-800 text-surface-800 dark:text-white font-medium rounded-xl shadow-md' },
+    { label: <Plus size={18} />, onClick: () => handleOperator('+'), className: 'bg-gradient-secondary text-white font-medium rounded-xl shadow-md' },
+    { label: 'MS', onClick: handleMemoryStore, className: 'bg-gradient-info text-white text-sm font-medium rounded-xl shadow-md' },
+    { label: '0', onClick: () => handleNumberInput('0'), className: 'bg-white dark:bg-surface-800 text-surface-800 dark:text-white font-medium rounded-xl shadow-md' },
+    { label: '.', onClick: handleDecimalPoint, className: 'bg-white dark:bg-surface-800 text-surface-800 dark:text-white font-medium rounded-xl shadow-md' },
+    { label: <Equal size={18} />, onClick: calculateResult, className: 'bg-gradient-primary hover:bg-gradient-purple-blue text-white font-bold rounded-xl shadow-md' },
   ]
 
   return (
@@ -166,14 +166,14 @@ const MainFeature = ({ onCalculation }) => {
       <motion.div 
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        className="neu-light dark:neu-dark rounded-2xl p-5 md:p-6"
+        className="bg-white/70 dark:bg-surface-800/70 backdrop-blur-md rounded-2xl p-5 md:p-6 shadow-soft"
       >
         {/* Display */}
-        <div className="bg-surface-100 dark:bg-surface-800 rounded-xl p-4 mb-5 overflow-hidden">
+        <div className="bg-gradient-light dark:bg-gradient-dark rounded-xl p-4 mb-5 overflow-hidden shadow-md">
           <div className="flex justify-between items-center mb-1">
             <div className="text-xs text-surface-500 dark:text-surface-400 flex items-center gap-1">
               {memory !== null && (
-                <span className="bg-primary/10 dark:bg-primary/20 text-primary px-1.5 py-0.5 rounded text-xs">
+                <span className="bg-gradient-primary text-white px-1.5 py-0.5 rounded text-xs">
                   M
                 </span>
               )}
@@ -188,7 +188,7 @@ const MainFeature = ({ onCalculation }) => {
                 whileTap={{ scale: 0.9 }}
                 onClick={handleMemoryRecall}
                 disabled={memory === null}
-                className={`p-1 rounded ${memory === null ? 'text-surface-400 dark:text-surface-600' : 'text-primary hover:bg-surface-200 dark:hover:bg-surface-700'}`}
+                className={`p-1 rounded ${memory === null ? 'text-surface-400 dark:text-surface-600' : 'text-primary-vivid hover:bg-surface-200 dark:hover:bg-surface-700'}`}
                 title="Memory Recall"
               >
                 <Clock size={14} />
@@ -197,7 +197,7 @@ const MainFeature = ({ onCalculation }) => {
                 whileTap={{ scale: 0.9 }}
                 onClick={handleMemoryClear}
                 disabled={memory === null}
-                className={`p-1 rounded ${memory === null ? 'text-surface-400 dark:text-surface-600' : 'text-accent hover:bg-surface-200 dark:hover:bg-surface-700'}`}
+                className={`p-1 rounded ${memory === null ? 'text-surface-400 dark:text-surface-600' : 'text-accent-light hover:bg-surface-200 dark:hover:bg-surface-700'}`}
                 title="Memory Clear"
               >
                 <Trash2 size={14} />
@@ -216,7 +216,9 @@ const MainFeature = ({ onCalculation }) => {
                 initial={{ opacity: 0, y: 5 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
-                className={`text-right text-3xl font-bold text-primary dark:text-primary-light ${animation ? 'text-accent' : ''} transition-colors duration-300`}
+                className={`text-right text-3xl font-bold bg-clip-text text-transparent 
+                  ${animation ? 'bg-gradient-accent' : 'bg-gradient-primary'} 
+                  transition-colors duration-300`}
               >
                 {result}
               </motion.div>
@@ -230,6 +232,7 @@ const MainFeature = ({ onCalculation }) => {
             <motion.button
               key={index}
               whileTap={{ scale: 0.95 }}
+              whileHover={{ boxShadow: "0 0 8px rgba(139, 92, 246, 0.3)" }}
               className={`${button.className} h-14 md:h-16`}
               onClick={button.onClick}
             >
@@ -244,16 +247,16 @@ const MainFeature = ({ onCalculation }) => {
             {memory !== null && (
               <div className="flex items-center gap-1">
                 <span>Memory:</span>
-                <span className="font-medium text-surface-700 dark:text-surface-300">{memory}</span>
+                <span className="font-medium bg-gradient-primary bg-clip-text text-transparent">{memory}</span>
               </div>
             )}
           </div>
           <motion.button
             whileTap={{ scale: 0.95 }}
             onClick={handleMemoryStore}
-            className="text-xs flex items-center gap-1 text-primary hover:text-primary-dark dark:hover:text-primary-light transition-colors"
+            className="text-xs flex items-center gap-1 bg-gradient-primary-secondary bg-clip-text text-transparent hover:text-primary-dark dark:hover:text-primary-light transition-colors"
           >
-            <Save size={14} />
+            <Save size={14} className="text-primary-vivid" />
             <span>Save result</span>
           </motion.button>
         </div>
